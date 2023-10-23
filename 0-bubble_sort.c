@@ -23,7 +23,7 @@ void bubble_sort(int *array, size_t size)
 				temp = array[i];
 				array[i] = array[i + 1];
 				array[i + 1] = temp;
-				print_arr(array, size);
+				print_array(array, size);
 			}
 			i++;
 		}
@@ -40,24 +40,4 @@ void bubble_sort(int *array, size_t size)
 			j++;
 		}
 	}
-}
-/**
- * print_array - prints an array recursively
- * @array: The array
- * @size: The size of the array
- *
- * Return: Nothing
- */
-void print_arr(int *array, int size)
-{
-	if (size == 1)
-	{
-		print_int(array[0]);
-		_putchar('\n');
-		return;
-	}
-	print_int(array[0]);
-	_putchar(',');
-	_putchar(' ');
-	print_arr(&array[1], size - 1);
 }
