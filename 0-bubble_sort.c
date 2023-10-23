@@ -23,7 +23,7 @@ void bubble_sort(int *array, size_t size)
 				temp = array[i];
 				array[i] = array[i + 1];
 				array[i + 1] = temp;
-				print_array(array, size);
+				print_arr(array, size);
 			}
 			i++;
 		}
@@ -48,7 +48,7 @@ void bubble_sort(int *array, size_t size)
  *
  * Return: Nothing
  */
-void print_array(int *array, int size)
+void print_arr(int *array, int size)
 {
 	if (size == 1)
 	{
@@ -59,5 +59,5 @@ void print_array(int *array, int size)
 	print_int(array[0]);
 	_putchar(',');
 	_putchar(' ');
-	print_array(&array[1], size - 1);
+	print_arr(&array[1], size - 1);
 }
